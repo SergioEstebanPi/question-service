@@ -42,8 +42,8 @@ public class QuestionController {
     }
 
     // getQuestionsFromIds(id)
-    @PostMapping("getQuestions/{id}")
-    public ResponseEntity<List<QuestionWrapper>> getQuestionsFromIds(@PathVariable List<Integer> ids) {
+    @PostMapping("getQuestions")
+    public ResponseEntity<List<QuestionWrapper>> getQuestionsFromIds(@RequestBody List<Integer> ids) {
         return questionService.getQuestionsFromIds(ids);
     }
 
